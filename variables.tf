@@ -26,38 +26,41 @@ variable "program" {
   }
 }
 
+
+
 variable "cpu" {
   type        = number
-  description = ""
+  description = "number of cpu units used by the task"
 }
 
 variable "execution_role_arn" {
   type        = string
-  description = ""
+  description = "arn of the role the task assigns to the ECS container agent and the Docker daemon"
 }
 
 variable "memory" {
   type        = number
-  description = ""
+  description = "amount (MiB) of memory used by the task"
 }
 
 variable "network_mode" {
   type        = string
-  description = ""
+  description = "docker networking mode to use for the containers in the task - either 'host', 'bridge', 'awsvpc' or 'none'"
   default     = "awsvpc"
 }
 
 variable "requires_compatibilities" {
   type        = set(string)
-  description = ""
+  description = "et of launch types required by the task - can be 'EC2' and/or 'FARGATE'"
   default     = ["FARGATE"]
 }
 
-variable "resource_name_suffix" {
-  type = string
+variable "task_name" {
+  type        = string
+  description = "name of the task - i.e. backend, frontend, files"
 }
 
 variable "task_role_arn" {
   type        = string
-  description = ""
+  description = "arn of role the task uses to call other aws services"
 }
