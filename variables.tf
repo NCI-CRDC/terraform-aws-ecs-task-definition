@@ -26,10 +26,8 @@ variable "program" {
   }
 }
 
-
-
 variable "cpu" {
-  type        = number
+  type        = string
   description = "number of cpu units used by the task"
 }
 
@@ -39,7 +37,7 @@ variable "execution_role_arn" {
 }
 
 variable "memory" {
-  type        = number
+  type        = string
   description = "amount (MiB) of memory used by the task"
 }
 
