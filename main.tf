@@ -12,5 +12,6 @@ resource "aws_ecs_task_definition" "this" {
 
   runtime_platform {
     operating_system_family = var.operating_system_family
+    cpu_architecture        = var.cpu_architecture
   }
 }
