@@ -33,6 +33,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_app"></a> [app](#input\_app) | the name of the application expressed as an acronym | `string` | n/a | yes |
+| <a name="input_container_definitions"></a> [container\_definitions](#input\_container\_definitions) | provide the json document that defines the container definitions for this task | `string` | n/a | yes |
 | <a name="input_cpu"></a> [cpu](#input\_cpu) | number of cpu units used by the task | `string` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | the target tier ('dev', 'qa', 'stage', or 'prod'.) | `string` | n/a | yes |
 | <a name="input_execution_role_arn"></a> [execution\_role\_arn](#input\_execution\_role\_arn) | arn of the role the task assigns to the ECS container agent and the Docker daemon | `string` | n/a | yes |
