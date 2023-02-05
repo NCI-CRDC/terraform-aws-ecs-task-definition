@@ -26,6 +26,11 @@ variable "program" {
   }
 }
 
+variable "container_definitions" {
+  type = string 
+  description = "provide the json document that defines the container definitions for this task"
+}
+
 variable "cpu" {
   type        = string
   description = "number of cpu units used by the task"
