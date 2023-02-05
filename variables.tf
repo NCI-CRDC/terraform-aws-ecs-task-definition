@@ -27,7 +27,7 @@ variable "program" {
 }
 
 variable "container_definitions" {
-  type = string 
+  type        = string
   description = "provide the json document that defines the container definitions for this task"
 }
 
@@ -50,6 +50,18 @@ variable "network_mode" {
   type        = string
   description = "docker networking mode to use for the containers in the task - either 'host', 'bridge', 'awsvpc' or 'none'"
   default     = "awsvpc"
+}
+
+variable "operating_system_family" {
+  type        = string
+  description = "if requires_compatibilities is FARGATE this field is required"
+  default     = "LINUX"
+}
+
+variable "cpu_architecture" {
+  type        = string
+  description = "ust be set to either 'X86_64' or 'ARM64'"
+  default     = "X86_64"
 }
 
 variable "requires_compatibilities" {
